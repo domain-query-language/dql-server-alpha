@@ -2,8 +2,8 @@
 ip: "192.168.10.11"
 memory: 2048
 cpus: 1
-hostname: bounded-context-sample-shopping
-name: bounded-context-sample-shopping
+hostname: dql-server
+name: dql-server
 provider: virtualbox
 
 authorize: ~/.ssh/id_rsa.pub
@@ -12,15 +12,15 @@ keys:
     - ~/.ssh/id_rsa
 
 folders:
-    - map: "/Users/barryosullivan/Code/bounded-context-sample-shopping"
-      to: "/home/vagrant/bounded-context-sample-shopping"
+    - map: "/Users/barryosullivan/Code/dql-server"
+      to: "/home/vagrant/dql-server"
 
 sites:
-    - map: bc-sample.app
-      to: "/home/vagrant/bounded-context-sample-shopping/public"
+    - map: dql-server.app
+      to: "/home/vagrant/dql-server/public"
 
 databases:
-    - bounded-context-sample-shopping
+    - dql-server
 
 # blackfire:
 #     - id: foo

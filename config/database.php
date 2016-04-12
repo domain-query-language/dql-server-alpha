@@ -55,7 +55,7 @@ return [
         'mysql' => [
             'driver'    => 'mysql',
             'host'      => env('DB_HOST', 'localhost'),
-            'database'  => env('DB_DATABASE', 'bounded-context-sample-shopping'),
+            'database'  => env('DB_DATABASE', 'dql_server'),
             'username'  => env('DB_USERNAME', 'homestead'),
             'password'  => env('DB_PASSWORD', 'secret'),
             'charset'   => 'utf8',

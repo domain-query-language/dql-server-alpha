@@ -15,11 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('create', 'TestController@create');
-Route::get('play', 'TestController@play');
-
-Route::get('parallel_command_test', 'TestController@parallel_command_test');
-Route::get('add_product/{product_id}', 'TestController@add_product');
-Route::get('create_cart/{cart_id}', 'TestController@create_cart');
-
-Route::get('user/create', 'UserController@create');
+Route::get('/console', 'CommandController@console');
+Route::post('/command', 'CommandController@handle');

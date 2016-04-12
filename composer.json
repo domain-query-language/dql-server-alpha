@@ -7,23 +7,23 @@
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/barryosull/bounded-context.git"
+      "url": "https://github.com/barryosull/bounded-context"
     },
     {
       "type": "git",
-      "url": "https://github.com/barryosull/bounded-context-laravel.git"
+      "url": "https://github.com/barryosull/bounded-context-laravel"
     },
     {
       "type": "git",
-      "url": "https://github.com/barryosull/valueobjects.git"
+      "url": "https://github.com/barryosull/valueobjects"
     }
   ],
   "require": {
-    "barryosull/bounded-context": "0.2.0",
-    "barryosull/bounded-context-laravel": "0.2.0",
-    "barryosull/valueobjects": "2.1.0",
+    "lyonscf/bounded-context": "0.2.*",
+    "lyonscf/bounded-context-laravel": "0.2.*",
+    "eventsourced/valueobjects": "2.1.0",
     "laravel/framework": "5.1.*",
-    "php": ">=7.0.3",
+    "php": ">=5.5.27",
     "ramsey/uuid": "~2.8",
     "respect/validation": "1.0.3"
   },
@@ -54,9 +54,7 @@
       "php artisan clear-compiled",
       "php artisan optimize"
     ],
-    "pre-update-cmd": [
-      "php artisan clear-compiled"
-    ],
+
     "post-update-cmd": [
       "php artisan optimize"
     ],
