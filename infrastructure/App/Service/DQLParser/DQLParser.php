@@ -19,11 +19,16 @@ class DQLParser implements DQLParser\DQLParser
     {
         $parser = $this->fetch_parser();
         try {
-            return $parser->parse($dql_statement);
+            return $this->array_tree_to_object_tree($parser->parse($dql_statement));
         } catch (PhpPegJs\SyntaxError $ex) {
             $message = "Syntax error: " . $ex->getMessage() . ' At line ' . $ex->grammarLine . ' column ' . $ex->grammarColumn . ' offset ' . $ex->grammarOffset;
             throw new DQLParser\ParserError($message);
         }
+    }
+    
+    private function array_tree_to_object_tree($array)
+    {
+        return json_decode(json_encode($array));
     }
     
     private function fetch_parser()
