@@ -21,7 +21,7 @@
   "require": {
     "lyonscf/bounded-context": "0.2.*",
     "lyonscf/bounded-context-laravel": "0.2.*",
-    "eventsourced/valueobjects": "2.1.0",
+    "eventsourced/valueobjects": "2.1.*",
     "laravel/framework": "5.1.*",
     "php": ">=5.5.27",
     "ramsey/uuid": "~2.8",

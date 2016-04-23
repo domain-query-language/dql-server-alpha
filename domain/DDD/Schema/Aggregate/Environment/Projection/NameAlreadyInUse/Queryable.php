@@ -1,4 +1,4 @@
-<?php namespace Domain\Shopping\Aggregate\Cart\Projection\OnlyActiveMemberCart;
+<?php namespace Domain\DDD\Schema\Aggregate\Environment\Projection\NameAlreadyInUse;
 
 use Domain\DDD\Schema\ValueObject\Name;
 use BoundedContext\ValueObject\Boolean;

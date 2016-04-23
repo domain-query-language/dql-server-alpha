@@ -7,7 +7,7 @@ use Domain\DDD\Schema\Aggregate\Environment\Event;
 
 class Projector extends AbstractProjector
 {
-    protected function when_shopping_cart_created(
+    protected function when_ddd_schema_environment_created(
         Projection $projection,
         Event\Created $event,
         Snapshot $snapshot

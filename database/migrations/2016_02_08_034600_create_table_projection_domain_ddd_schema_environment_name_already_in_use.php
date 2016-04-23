@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableProjectionsDomainShoppingActiveCarts extends Migration
+class CreateTableProjectionDomainDddSchemaEnvironmentNameAlreadyInUse extends Migration
 {
     /**
      * Run the migrations.
@@ -12,9 +12,8 @@ class CreateTableProjectionsDomainShoppingActiveCarts extends Migration
      */
     public function up()
     {
-        Schema::create('projections_domain_shopping_active_carts', function (Blueprint $table) {
-            $table->string('id', 36)->unique();
-            $table->string('member_id', 36);
+        Schema::create('domain_ddd_schema_environment_name_already_in_use', function (Blueprint $table) {
+            $table->string('name')->unique();
         });
     }
 
@@ -25,6 +24,6 @@ class CreateTableProjectionsDomainShoppingActiveCarts extends Migration
      */
     public function down()
     {
-        Schema::drop('projections_domain_shopping_active_carts');
+        Schema::drop('domain_ddd_schema_environment_name_already_in_use');
     }
 }

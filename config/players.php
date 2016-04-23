@@ -18,7 +18,8 @@ return [
     'domain' => [
 
         'projectors' => [
-            '121837f2-6b4a-4450-855a-94bc23d2db49' => \Domain\Shopping\Aggregate\Cart\Projection\OnlyActiveMemberCart\Projector::class,
+            '121837f2-6b4a-4450-855a-94bc23d2db49' => 
+                Domain\DDD\Schema\Aggregate\Environment\Projection\NameAlreadyInUse\Projector::class
         ],
 
         'workflows' => [

@@ -10,8 +10,7 @@ return [
     ],
 
     'domain' => [
-
-        \Domain\Shopping\Aggregate\Cart\Projection\OnlyActiveMemberCart\Projection::class =>
-            Infrastructure\Domain\Shopping\Cart\Projection\OnlyActiveMemberCart\Projection::class,
-    ]
+        \Domain\DDD\Schema\Aggregate\Environment\Projection\NameAlreadyInUse\Projection::class =>
+            \Infrastructure\Domain\DDD\Schema\Aggregate\Environment\Projection\NameAlreadyInUse\Projection::class
+    ],
 ];

@@ -12,12 +12,16 @@ class CreateTableSnapshotsAggregateState extends Migration
      */
     public function up()
     {
-        Schema::create('snapshots_aggregate_state', function (Blueprint $table) {
-            $table->string('id', 36)->unique();
-            $table->dateTimeTz('occurred_at');
-            $table->integer('version')->default(0);
-            $table->text('state');
-        });
+        DB::statement("
+            CREATE TABLE `snapshots_aggregate_state` (
+                `aggregate_id` varchar(36) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+                `aggregate_type_id` varchar(36) COLLATE utf8_unicode_ci NOT NULL,
+                `occurred_at` datetime NOT NULL,
+                `version` int(11) NOT NULL DEFAULT '0',
+                `state` text COLLATE utf8_unicode_ci NOT NULL,
+                UNIQUE KEY `snapshots_aggregate_state_id_unique` (`aggregate_id`)
+            ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;"
+        );
     }
 
     /**

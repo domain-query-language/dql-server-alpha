@@ -1,8 +1,8 @@
-<?php namespace Domain\Shopping\Aggregate\Cart\Invariant;
+<?php namespace Domain\DDD\Schema\Aggregate\Environment\Invariant;
 
 use BoundedContext\Business\Invariant\AbstractInvariant;
 use BoundedContext\Contracts\Business\Invariant\Invariant;
-use Domain\Shopping\Aggregate\Cart\Projection as Queryable;
+use Domain\DDD\Schema\Aggregate\Environment\Projection as Queryable;
 
 class Created extends AbstractInvariant implements Invariant
 {
